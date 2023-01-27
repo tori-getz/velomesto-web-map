@@ -1,6 +1,7 @@
 import { httpClient } from "~/core/networking/http";
 import { PlaceEntity } from "~/domain/entities/place.entity";
 import { PlaceModel } from "~/data/models/place.model";
+import { injectable } from "inversify";
 
 export interface PlaceDataSource {
   getPlaces(
@@ -11,6 +12,7 @@ export interface PlaceDataSource {
   ): Promise<PlaceEntity[]>;
 }
 
+@injectable()
 export class PlaceDataSourceImpl implements PlaceDataSource {
   public async getPlaces(
     latitude__gte: number,

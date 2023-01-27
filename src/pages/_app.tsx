@@ -1,6 +1,20 @@
-import '~/styles/globals.css'
+import 'reflect-metadata';
+
+import React from 'react';
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { Provider as InversifyProvider } from 'inversify-react';
+import { container } from '~/core/di/container';
+
+const App: React.FC<AppProps> = ({
+  Component,
+  pageProps
+}) => {
+  return (
+    <InversifyProvider container={container}>
+      <Component {...pageProps} />
+    </InversifyProvider>
+  )
 }
+
+export default App;

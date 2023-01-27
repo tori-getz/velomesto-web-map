@@ -189,6 +189,11 @@ form-data@^4.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
+inversify-react@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/inversify-react/-/inversify-react-1.0.2.tgz#6784f0e2dd3c497a392176f52f70e74c20b541f9"
+  integrity sha512-MuN70F0IIqXPDYStkd3wr2+A+y90xtAFQn9rfLkkcGPSsmiODRmQ9pKq7kdZtpW0JuSDhGm6O76ZSpiY8bJA5w==
+
 inversify@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/inversify/-/inversify-6.0.1.tgz#b20d35425d5d8c5cd156120237aad0008d969f02"

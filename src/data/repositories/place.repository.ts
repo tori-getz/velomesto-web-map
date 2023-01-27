@@ -1,12 +1,15 @@
 import { Either, left, right } from "@sweet-monads/either";
+import { inject, injectable } from "inversify";
+import { PLACE_DATA_SOURCE } from "~/core/di/types";
 import { Failure, ServerFailure } from "~/core/error/failure";
 import { PlaceEntity } from "~/domain/entities/place.entity";
 import { PlaceRepository } from "~/domain/repositories/point.repository.interface";
-import { PlaceDataSource } from "../datasources/place.datasource";
+import type { PlaceDataSource } from "../datasources/place.datasource";
 
+@injectable()
 export class PlaceRepositoryImpl implements PlaceRepository{
   public constructor (
-    private readonly placeDataSource: PlaceDataSource
+    @inject(PLACE_DATA_SOURCE) private readonly placeDataSource: PlaceDataSource
   ) {}
 
   public async getPlaces(
