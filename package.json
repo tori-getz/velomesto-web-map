@@ -15,9 +15,11 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "axios": "^1.2.5",
+    "inversify": "^6.0.1",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "reflect-metadata": "^0.1.13",
     "typescript": "4.9.4",
     "zod": "^3.20.2"
   },

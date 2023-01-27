@@ -1,7 +1,7 @@
 import { Either } from "@sweet-monads/either";
 import { Failure } from "~/core/error/failure";
 import { UseCase } from "~/core/use-case";
-import { PlaceEntity } from "../entities/place";
+import { PlaceEntity } from "../entities/place.entity";
 
 export interface GetPlacesParams {
   latitude__gte: number

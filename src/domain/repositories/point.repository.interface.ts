@@ -1,9 +1,9 @@
 import { Either } from "@sweet-monads/either";
 import { Failure } from "~/core/error/failure";
-import { PlaceEntity } from "../entities/place";
+import { PlaceEntity } from "~/domain/entities/place.entity";
 
-export default interface PlaceRepository {
-  getPoints(
+export interface PlaceRepository {
+  getPlaces(
     latitude__gte: number,
     latitude__lte: number,
     longitude__gte: number, 
