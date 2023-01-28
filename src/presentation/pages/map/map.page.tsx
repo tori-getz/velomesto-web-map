@@ -43,8 +43,8 @@ export const MapPage: NextPage = () => {
     setDetailsVisible(true);
 
     mapRef.current?.flyTo({
-      center: [place.longitude, place.latitude]
-      // zoom
+      center: [place.longitude, place.latitude],
+      zoom: 12
     });
 
     const details = await getPlaceDetails(place.id);
@@ -68,6 +68,7 @@ export const MapPage: NextPage = () => {
         ref={mapRef}
         onLoad={onMove}
         onMoveEnd={onMove}
+        dragRotate
         mapStyle="mapbox://styles/mapbox/streets-v9"
         mapboxAccessToken={EnvConfig.mapboxAccessToken}
       >
