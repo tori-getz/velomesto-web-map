@@ -11,6 +11,7 @@ import { Point } from "~/presentation/components/point/point.component";
 import { PlaceEntity } from "~/domain/entities/place.entity";
 import { PlaceDetails } from "~/presentation/components/place-details/place-details.component";
 import { PlaceDetailsEntity } from "~/domain/entities/place-details.entity";
+import { toast } from "react-toastify";
 
 export const MapPage: NextPage = () => {
   const {
@@ -47,10 +48,14 @@ export const MapPage: NextPage = () => {
       zoom: 12
     });
 
-    const details = await getPlaceDetails(place.id);
+    try {
+      const details = await getPlaceDetails(place.id);
 
-    setDetails(details);
-    setDetailsLoading(false);
+      setDetails(details);
+      setDetailsLoading(false);
+    } catch (e: any) {
+      toast.error(e.message);
+    }
   }, []);
 
   return (
