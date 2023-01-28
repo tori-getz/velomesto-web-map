@@ -4,7 +4,7 @@ import { Container } from "inversify";
 
 import { PlaceDataSource, PlaceDataSourceImpl } from "~/data/datasources/place.datasource";
 import { PlaceRepositoryImpl } from "~/data/repositories/place.repository";
-import { PlaceRepository } from "~/domain/repositories/place.repository.interface";
+import { PlaceRepository } from "~/domain/repositories/place.abstract-repository";
 import { GetPlaces } from "~/domain/usecases/get-places.usecase";
 import { GET_PLACES, GET_PLACE_DETAILS, PLACE_DATA_SOURCE, PLACE_REPOSITORY } from './types';
 import { GetPlaceDetails } from '~/domain/usecases/get-place-details.usecase';
