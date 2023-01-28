@@ -4,7 +4,7 @@ import { PLACE_DATA_SOURCE } from "~/core/di/types";
 import { Failure, ServerFailure } from "~/core/error/failure";
 import { PlaceDetailsEntity } from "~/domain/entities/place-details.entity";
 import { PlaceEntity } from "~/domain/entities/place.entity";
-import { PlaceRepository } from "~/domain/repositories/place.repository.interface";
+import { PlaceRepository } from "~/domain/repositories/place.abstract-repository";
 import type { PlaceDataSource } from "../datasources/place.datasource";
 
 @injectable()

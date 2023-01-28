@@ -16,6 +16,10 @@ export abstract class PlaceDataSource {
   public abstract getPlaceDetails(id: number): Promise<PlaceDetailsEntity>
 }
 
+// я не совснм уверен, что нужно именно так валидировать даные приходящие из api
+// но пусть будет так =)
+// вроде zod должен выкидывать эксепшены, но я пока только учусь их вылавливать с применением чистой архитектуры
+
 @injectable()
 export class PlaceDataSourceImpl implements PlaceDataSource {
   public async getPlaces(

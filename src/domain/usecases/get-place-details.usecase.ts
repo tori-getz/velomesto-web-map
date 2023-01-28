@@ -4,7 +4,7 @@ import { PLACE_REPOSITORY } from "~/core/di/types";
 import { Failure } from "~/core/error/failure";
 import { UseCase } from "~/core/use-case";
 import { PlaceDetailsEntity } from "../entities/place-details.entity";
-import { PlaceRepository } from "../repositories/place.repository.interface";
+import { PlaceRepository } from "../repositories/place.abstract-repository";
 
 export interface GetPlaceDetailsParams {
   id: number
