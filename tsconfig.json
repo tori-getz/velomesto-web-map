@@ -18,9 +18,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
-      "~/*": ["./src/*"],
-      "nextjs-effector": ["./src/nextjs-effector"],
-      "nextjs-effector/*": ["./src/nextjs-effector/*"]
+      "~/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
