@@ -8,7 +8,6 @@ import type { AppProps } from 'next/app'
 
 import { Provider as InversifyProvider } from 'inversify-react';
 import { container } from '~/core/di/container';
-import { withEffector } from '~/lib/nextjs-effector/library';
 
 const App: React.FC<AppProps> = ({
   Component,
@@ -21,4 +20,4 @@ const App: React.FC<AppProps> = ({
   )
 }
 
-export default withEffector(App);
+export default App;
