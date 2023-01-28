@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,13 +14,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
     "paths": {
-      "~/*": ["./src/*"],
-      "nextjs-effector": ["./src/nextjs-effector"],
-      "nextjs-effector/*": ["./src/nextjs-effector/*"]
+      "@app": ["./src"],
+      "@app/*": ["./src/*"],
+      "nextjs-effector": ["./library"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
