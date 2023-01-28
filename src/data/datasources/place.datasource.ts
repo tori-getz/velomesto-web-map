@@ -24,7 +24,7 @@ export class PlaceDataSourceImpl implements PlaceDataSource {
     longitude__gte: number,
     longitude__lte: number
   ): Promise<PlaceEntity[]> {
-    const { data: places } = await httpClient.get<PlaceEntity[]>(`/place/?latitude__gte=${latitude__gte}&latitude__lte=${latitude__lte}&longitude__gte=${longitude__gte}&longitude__lte=${longitude__lte}`);
+    const { data: places } = await httpClient.get<PlaceEntity[]>(`/place/?latitude__gte=${latitude__gte}&latitude__lte=${latitude__lte}&longitude__gte=${longitude__gte}&longitude__lte=${longitude__lte}&limit=100`);
 
     await PlaceModel.array().parseAsync(places);
 

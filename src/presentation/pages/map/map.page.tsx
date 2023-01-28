@@ -1,20 +1,28 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { NextPage } from "next";
-import { Map, MapRef, Marker } from "react-map-gl";
+import { Map, MapRef } from "react-map-gl";
 import { EnvConfig } from "~/core/env";
 
 import styles from './map.module.sass';
 
 import { usePlaces } from "~/presentation/hooks/use-places.hook";
 import { Point } from "~/presentation/components/point/point.component";
+import { PlaceEntity } from "~/domain/entities/place.entity";
+import { PlaceDetails } from "~/presentation/components/place-details/place-details.component";
+import { PlaceDetailsEntity } from "~/domain/entities/place-details.entity";
 
 export const MapPage: NextPage = () => {
   const {
     places,
-    getPlaces
+    getPlaces,
+    getPlaceDetails
   } = usePlaces();
 
+  const [ detailsVisible, setDetailsVisible ] = useState<boolean>(false);
+  const [ detailsLoading, setDetailsLoading ] = useState<boolean>(true);
+  const [ details, setDetails ] = useState<PlaceDetailsEntity | null>(null);
+  
   const mapRef = useRef<MapRef>(null);
 
   const onMove = useCallback(async () => {
@@ -30,9 +38,32 @@ export const MapPage: NextPage = () => {
     });
   }, []);
 
+  const openPlaceDetails = useCallback(async (place: PlaceEntity) => {
+    setDetailsLoading(true);
+    setDetailsVisible(true);
+
+    mapRef.current?.flyTo({
+      center: [place.longitude, place.latitude]
+      // zoom
+    });
+
+    const details = await getPlaceDetails(place.id);
+
+    setDetails(details);
+    setDetailsLoading(false);
+  }, []);
+
   return (
     <main className={styles.wrapper}>
-      <h1>Places count: {places.length}</h1>
+      <PlaceDetails
+        visible={detailsVisible}
+        onClose={() => {
+          setDetailsVisible(false)
+          setDetails(null);
+        }}
+        details={details}
+        loading={detailsLoading}
+      />
       <Map
         ref={mapRef}
         onLoad={onMove}
@@ -45,8 +76,9 @@ export const MapPage: NextPage = () => {
             key={place.id}  
             latitude={place.latitude}
             longitude={place.longitude}
+            selected={details?.id === place.id}
             onPress={() => {
-              alert(JSON.stringify(place))
+              openPlaceDetails(place);
             }}
           />
         ))}

@@ -1,5 +1,6 @@
 import axios from "axios";
+import { EnvConfig } from "../env";
 
 export const httpClient = axios.create({
-  baseURL: 'https://velomesto.com/api/v4'
+  baseURL: EnvConfig.apiUrl
 });

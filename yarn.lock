@@ -497,6 +497,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-image-gallery@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/react-image-gallery/-/react-image-gallery-1.2.0.tgz#b76ff74b312b8343f290ed105f134ee2d31a2ece"
+  integrity sha512-y5OEficUWcnGEc6KvflRXgvhtaMSsDH6JGT3/SJs0FV/RgtKuIgrUpGbDw5MdzyUwe/D8sJTo+aw8NOkaX0nIA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@18.0.27":
   version "18.0.27"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.27.tgz#d9425abe187a00f8a5ec182b010d4fd9da703b71"
@@ -620,6 +627,11 @@ chalk@^2.0.0:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 client-only@0.0.1:
   version "0.0.1"
@@ -1071,12 +1083,27 @@ react-icons@^4.7.1:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
   integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
 
+react-image-gallery@^1.2.11:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.2.11.tgz#707331e71b02964f00c1f3ab98e9efe071ff9f15"
+  integrity sha512-YLMCdNSCf3YPhRmnjEOdEZGEXghTMx4o3dlAqd0rz0nAyebUvTz/xJnIHPActbPSHCvVJgt5A09EPHYbGqw++w==
+
 react-map-gl@^7.0.21:
   version "7.0.21"
   resolved "https://registry.yarnpkg.com/react-map-gl/-/react-map-gl-7.0.21.tgz#264b89b31dbd8f020dbddf49f89f282dfcedcc8b"
   integrity sha512-Cmokphv6VHfRJsHVjCtn7nw5mf8rl89CHdvPSaif0OWZZqe+pxM2/5hEr4EvPWeTokRPCo1XTrBpGbShkEuktQ==
   dependencies:
     "@types/mapbox-gl" "^2.6.0"
+
+react-modern-drawer@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-modern-drawer/-/react-modern-drawer-1.2.0.tgz#1604acab03facac03945fc3cfc61e59d535ca6e8"
+  integrity sha512-GBQaeDNpnt6GFm3U9y/wzkZerP6R92CrgC9ge3/PHCm0F0LdUzt7rjFSwdd47Pdy6+FhXKR2rn7VxW3pl/+m9w==
+
+react-spinners@^0.13.8:
+  version "0.13.8"
+  resolved "https://registry.yarnpkg.com/react-spinners/-/react-spinners-0.13.8.tgz#5262571be0f745d86bbd49a1e6b49f9f9cb19acc"
+  integrity sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==
 
 react@18.2.0:
   version "18.2.0"

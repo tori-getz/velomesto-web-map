@@ -2,20 +2,23 @@ import React from 'react';
 
 import { Marker } from 'react-map-gl';
 import { MdLocationPin } from 'react-icons/md';
+import FadeIn from 'react-fade-in/lib/FadeIn';
 
 import styles from './point.module.sass';
-import FadeIn from 'react-fade-in/lib/FadeIn';
+import cn from 'classnames';
 
 export interface PointProps {
   latitude: number
   longitude: number
   onPress: () => any;
+  selected: boolean
 }
 
 export const Point: React.FC<PointProps> = ({
   latitude,
   longitude,
-  onPress
+  onPress,
+  selected
 }) => {
   return (
     <Marker
@@ -24,9 +27,12 @@ export const Point: React.FC<PointProps> = ({
       onClick={onPress}
     >
       <FadeIn>
-        <div className={styles.point}>
+        <div className={cn(
+          styles.point,
+          { [styles.selected]: selected }
+        )}>
           <MdLocationPin
-            size={15}
+            size={selected ? 25 : 15}
             color='white'
           />
         </div>

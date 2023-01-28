@@ -1,5 +1,5 @@
-import 'reflect-metadata';
-
+import 'react-image-gallery/styles/css/image-gallery.css'
+import 'react-modern-drawer/dist/index.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import 'scss-reset/_reset.scss'
 
