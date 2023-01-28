@@ -3,8 +3,8 @@ import { PlaceEntity } from "~/domain/entities/place.entity";
 import { PlaceModel } from "~/data/models/place.model";
 import { injectable } from "inversify";
 
-export interface PlaceDataSource {
-  getPlaces(
+export abstract class PlaceDataSource {
+  public abstract getPlaces(
     latitude__gte: number,
     latitude__lte: number,
     longitude__gte: number, 

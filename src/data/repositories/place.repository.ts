@@ -8,9 +8,8 @@ import type { PlaceDataSource } from "../datasources/place.datasource";
 
 @injectable()
 export class PlaceRepositoryImpl implements PlaceRepository{
-  public constructor (
-    @inject(PLACE_DATA_SOURCE) private readonly placeDataSource: PlaceDataSource
-  ) {}
+  @inject(PLACE_DATA_SOURCE)
+  private readonly placeDataSource!: PlaceDataSource
 
   public async getPlaces(
     latitude__gte: number,

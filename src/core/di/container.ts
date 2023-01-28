@@ -1,9 +1,12 @@
+import 'reflect-metadata';
+
 import { Container } from "inversify";
+
 import { PlaceDataSource, PlaceDataSourceImpl } from "~/data/datasources/place.datasource";
 import { PlaceRepositoryImpl } from "~/data/repositories/place.repository";
 import { PlaceRepository } from "~/domain/repositories/point.repository.interface";
 import { GetPlaces } from "~/domain/usecases/get-places.usecase";
-import { GET_PLACES, PLACE_DATA_SOURCE, PLACE_REPOSITORY } from "./types";
+import { GET_PLACES, PLACE_DATA_SOURCE, PLACE_REPOSITORY } from './types';
 
 const container = new Container();
 

@@ -1,8 +1,3 @@
-export default function Home() {
-  return (
-    <>
-      <h1>helol</h1>
-    </>
-  )
-}
+import { MapPage } from "~/presentation/pages/map/map.page";
 
+export default MapPage;

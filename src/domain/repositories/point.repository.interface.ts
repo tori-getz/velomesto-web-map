@@ -2,8 +2,8 @@ import { Either } from "@sweet-monads/either";
 import { Failure } from "~/core/error/failure";
 import { PlaceEntity } from "~/domain/entities/place.entity";
 
-export interface PlaceRepository {
-  getPlaces(
+export abstract class PlaceRepository {
+  public abstract getPlaces(
     latitude__gte: number,
     latitude__lte: number,
     longitude__gte: number, 

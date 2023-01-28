@@ -1,8 +1,8 @@
 // use cases
-export const GET_PLACES = Symbol('GET_PLACES');
+export const GET_PLACES = 'GET_PLACES';
 
 // repositories 
-export const PLACE_REPOSITORY = Symbol('PLACE_REPOSITORY');
+export const PLACE_REPOSITORY = 'PLACE_REPOSITORY';
 
 // data sources 
-export const PLACE_DATA_SOURCE = Symbol('PLACE_DATA_SOURCE');
+export const PLACE_DATA_SOURCE = 'PLACE_DATA_SOURCE';
