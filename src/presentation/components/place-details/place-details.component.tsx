@@ -4,9 +4,10 @@ import { PlaceDetailsEntity } from "~/domain/entities/place-details.entity";
 
 import Drawer from "react-modern-drawer";
 import { BounceLoader } from "react-spinners";
+import { MdClose } from 'react-icons/md';
+import ReactImageGallery from "react-image-gallery";
 
 import styles from "./place-details.module.sass";
-import ReactImageGallery from "react-image-gallery";
 
 export interface PlaceDetailsProps {
   visible: boolean;
@@ -44,7 +45,14 @@ export const PlaceDetails: React.FC<PlaceDetailsProps> = ({
           />
         )}
         <aside className={styles.aside}>
-          <h1 className={styles.title}>{details?.name}</h1>
+          <header className={styles.header}>
+            <h1>{details?.name}</h1>
+            <MdClose
+              size={20}
+              className={styles.close}
+              onClick={onClose}
+            />
+          </header>
           <p>{details?.description}</p>
           <div className={styles.infoBlock}>
             <h2>Страна</h2>
