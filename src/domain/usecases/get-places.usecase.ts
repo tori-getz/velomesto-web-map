@@ -4,7 +4,7 @@ import { PLACE_REPOSITORY } from "~/core/di/types";
 import { Failure } from "~/core/error/failure";
 import { UseCase } from "~/core/use-case";
 import { PlaceEntity } from "../entities/place.entity";
-import { PlaceRepository } from "../repositories/point.repository.interface";
+import { PlaceRepository } from "../repositories/place.repository.interface";
 
 export interface GetPlacesParams {
   latitude__gte: number
